@@ -79,7 +79,7 @@ export const CreateItem = () => {
     }
 
 
-
+    //Create a product 
     const handleCreateProduct = async (values) => {
         console.log(values)
         try {
@@ -92,6 +92,7 @@ export const CreateItem = () => {
         }
     }
 
+    //Form reset fields
     const onReset = () => {
         form.resetFields();
     };

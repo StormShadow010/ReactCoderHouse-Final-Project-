@@ -1,14 +1,16 @@
 import { useParams } from "react-router-dom";
 import { NavbarComponent } from "../../components/NavbarComponent/NavbarComponent"
-import "./ItemDetailIndividualStyle.scss"
 import { useGetProductById } from "../../services/productsService";
 import { ItemCount } from "../../components/ItemCount/ItemCount";
 
+//Styles
+import "./ItemDetailIndividualStyle.scss"
+
 export const ItemDetailIndividual = () => {
     const { id } = useParams()
-    // const { productsData } = useGetProductById('products', id)
+
     const { productData } = useGetProductById("products", id)
-    // console.log(productData)
+
 
     return (
         <div className="mainContainerItemDetail" >

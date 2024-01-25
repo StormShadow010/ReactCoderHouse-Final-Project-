@@ -6,7 +6,7 @@ import "./HomeStyle.scss"
 
 export const Home = () => {
     const { productsData } = GetProductsFirebase('products');
-    // console.log(productsData)
+
     return (
         <>
             <div className="container">

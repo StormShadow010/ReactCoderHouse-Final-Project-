@@ -1,36 +1,32 @@
 import { useEffect, useState } from "react";
 import { NavbarComponent } from "../../components/NavbarComponent/NavbarComponent"
 import { useMainContext } from "../../providers/mainContext"
+import { Table, Space, Row, Col, Form, Input, Button, InputNumber, Modal } from 'antd';
+
+// Styles
 import "./BriefCheckoutStyle.scss"
 
-import { Table, Space, Row, Col, Form, Input, Button, InputNumber, Modal } from 'antd';
+//Icons
 import youdidit from "../../assets/images/youdidit.png"
-export const BriefCheckout = () => {
-    const [buttonEnable, setButtonEnable] = useState(true);
 
+export const BriefCheckout = () => {
+    const { cartShopping, setCartShopping } = useMainContext()
+    //States
+
+    const [buttonEnable, setButtonEnable] = useState(true);    //Button to purchase 
+
+    const [isModalOpen, setIsModalOpen] = useState(false); //Modal message
+
+    //Emails to compare
     const [emails, setEmails] = useState({
         email: "h",
         reemail: "o",
     });
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-
-
-    const { cartShopping, setCartShopping } = useMainContext()
-
-    let counterProduct = 0;
-    const newCartShopping = cartShopping.map(item => {
-        let priceTotal = 0;
-        counterProduct++;
-        priceTotal = item.priceGame * item.quantity
-        return { ...item, key: counterProduct, subtotal: priceTotal };
-    });
-
-    const totalPrice = newCartShopping.reduce((total, item) => total + item.subtotal, 0);
-
+    //Form
     const [form] = Form.useForm();
 
+    //Columns for table
     const columns = [
         {
             title: 'Image',
@@ -72,12 +68,27 @@ export const BriefCheckout = () => {
         },
     ];
 
+    //Functions
 
+    //Function to add priceTotal and key for table
+    let counterProduct = 0;
+    const newCartShopping = cartShopping.map(item => {
+        let priceTotal = 0;
+        counterProduct++;
+        priceTotal = item.priceGame * item.quantity
+        return { ...item, key: counterProduct, subtotal: priceTotal };
+    });
+
+    //Function to calculate the final price to pay
+    const totalPrice = newCartShopping.reduce((total, item) => total + item.subtotal, 0);
+
+    //Function to remove a specific item 
     const handleRemove = (data) => {
         const newCart = cartShopping.filter((item) => item.id !== data.id);
         setCartShopping(newCart);
     }
 
+    //Function on which purchase was made
     const onFinish = (values) => {
         console.log('Success:', values);
         setIsModalOpen(true);
@@ -85,6 +96,7 @@ export const BriefCheckout = () => {
         onReset()
     };
 
+    //Validate emails
     const handleChange = (e) => {
         e.preventDefault();
         const { name, value } = e.target;
@@ -100,6 +112,7 @@ export const BriefCheckout = () => {
         }
     }, [emails.email, emails.reemail, newCartShopping]);
 
+    //Go out Modal
     const handleOk = () => {
         setIsModalOpen(false);
     }
@@ -108,6 +121,7 @@ export const BriefCheckout = () => {
         setIsModalOpen(false);
     };
 
+    //Form reset fields
     const onReset = () => {
         form.resetFields();
     };

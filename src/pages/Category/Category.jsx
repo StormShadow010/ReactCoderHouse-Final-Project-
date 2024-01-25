@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom"
 import { NavbarComponent } from "../../components/NavbarComponent/NavbarComponent"
-
-// Styles
-import "./CategoryStyle.scss"
 import { useEffect, useState } from "react"
 import { getProductByCategory } from "../../services/productsService"
 import { ItemListContainerComponent } from "../../components/ItemListContainerComponent/ItemListContainerComponent"
+
+// Styles
+import "./CategoryStyle.scss"
 
 export const Category = () => {
     const { category } = useParams()
@@ -15,8 +15,8 @@ export const Category = () => {
     const fetchDataGeneral = async () => {
         const fetchedData = await getProductByCategory(category);
         setProductsData(fetchedData)
-        console.log(fetchedData)
     }
+
     useEffect(() => {
         fetchDataGeneral()
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,10 +27,7 @@ export const Category = () => {
             <div className="containerCategoryIndividual">
                 <NavbarComponent />
                 <div className="categoryIndividual-content">
-                    {productsData && (
-                        < ItemListContainerComponent productsData={productsData} />
-                    )
-                    }
+                    {productsData && (< ItemListContainerComponent productsData={productsData} />)}
                 </div>
             </div>
         </>

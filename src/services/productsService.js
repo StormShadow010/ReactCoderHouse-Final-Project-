@@ -65,26 +65,4 @@ export const checkCategoryFirebase = async (category) => {
     return resultQ
 }
 
-// //Get a product by specific ID
-// export const useGetProductByIdCheck = (collectionName = "products", ids) => {
-//     console.log(ids);
-
-//     const [productData, setProductData] = useState([]);
-
-//     const fetchData = async () => {
-//         let data = [];
-//         for (let id of ids) {
-//             const docRef = doc(db, collectionName, id);
-//             await getDoc(docRef).then((doc) => {
-//                 if (doc.exists()) {
-//                     data.push({ id: doc.id, ...doc.data() });
-//                 }
-//             });
-//         }
-//         setProductData(data);
-//     };
-
-//     return { fetchData, productData };
-// };
-
 

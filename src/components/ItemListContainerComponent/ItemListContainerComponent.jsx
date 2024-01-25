@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Card } from 'antd';
-
-import "./ItemListContainerComponent.scss"
-
 import { Link } from "react-router-dom";
 
+//Styles
+import "./ItemListContainerComponent.scss"
+
+//Ant Design Elements
 const { Meta } = Card;
+
 // eslint-disable-next-line react/prop-types
 export const ItemListContainerComponent = ({ productsData }) => {
     return (
@@ -37,42 +39,6 @@ export const ItemListContainerComponent = ({ productsData }) => {
                     </Card>
                 );
             })}
-
-
-
-
-
         </div>
-        // <div className="productsContainer">
-        //     {productsData.map((product) => {
-        //         return (
-        //             <div key={product.id} className="itemProduct">
-        //                 <Card
-        //                     style={{
-        //                         width: 350,
-        //                     }}
-        //                     cover={
-        //                         <img
-        //                             alt="example"
-        //                             src={product.background_image}
-        //                             width={350}
-        //                             height={200}
-        //                             style={{ objectFit: 'cover' }}
-        //                         />
-        //                     }
-        //                     actions={[
-        //                         // <Link to={`/item/${product.id}`} key="setting"><InfoCircleOutlined /></Link>,
-        //                         <PriceGame key="price" />,
-        //                     ]}
-        //                 >
-        //                     {/* <Meta
-        //                         title={product.name}
-        //                     // description={<Platforms platforms={product.parent_platforms} />}
-        //                     /> */}
-        //                 </Card>
-        //             </div>
-        //         );
-        //     })}
-        // </div>
     )
 }

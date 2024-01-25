@@ -45,9 +45,8 @@ export const NavbarComponent = () => {
 
                                         <ul className={`dropdown-menu ${isOpen ? "active" : ""}`}>
                                             {categories.map((categoryItem) => (
-                                                // <h1 key={index}>{categoryItem}</h1>
                                                 <li key={categoryItem.id}>
-                                                    <Link to={`/category/${categoryItem.titleCategory}`} className='pageLink' onClick={() => console.log(`Clicked on category: ${categoryItem.titleCategory}`)}>{capitalizarPrimeraLetra(categoryItem.titleCategory)}</Link>
+                                                    <Link to={`/category/${categoryItem.titleCategory}`} className='pageLink' >{capitalizarPrimeraLetra(categoryItem.titleCategory)}</Link>
                                                 </li>
                                             ))}
                                         </ul>

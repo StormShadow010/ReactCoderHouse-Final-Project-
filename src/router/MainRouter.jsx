@@ -15,8 +15,6 @@ export const MainRouter = () => {
                 <Route path='/brief' element={<BriefCheckout />} />
                 <Route path='/item/:id' element={<ItemDetailIndividual />} />
                 <Route path='/category/:category' element={<Category />} />
-                {/* <Route path='/login' element={<LogIn />} /> */}
-                {/* <Route path='/news' element={<News />} /> */}
             </Routes>
         </BrowserRouter>
     )

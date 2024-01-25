@@ -20,13 +20,6 @@ export const MainProviderContext = ({ children }) => {
 
     const [categories, setCategories] = useState();
 
-    // // //Create a new product in collection "products"
-    // // const createProductsFirebase = (collectionName = "products", data) => {
-    // //     const productsCollection = collection(db, collectionName); //Podemos usarlo para cualquier colección
-    // //     return addDoc(productsCollection, data)
-    // //     // eslint-disable-next-line react-hooks/exhaustive-deps    
-    // // }
-
     //Bring categories from firebase
     const getCategoriesFirebase = async (collectionName = "categories") => {
         const productsCollection = collection(db, collectionName); //Podemos usarlo para cualquier colección

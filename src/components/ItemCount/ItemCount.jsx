@@ -1,8 +1,9 @@
 import { Button } from 'antd';
-import "./ItemCount.scss"
 import { useCount } from '../../hooks/useCount';
 import { useMainContext } from '../../providers/mainContext';
 
+// Styles
+import "./ItemCount.scss"
 
 // eslint-disable-next-line react/prop-types
 export const ItemCount = ({ product }) => {
