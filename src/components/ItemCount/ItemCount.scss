@@ -5,6 +5,9 @@
     justify-content: center;
 
     .buttonsCounter {
+        display: flex;
+        align-items: center;
+
         .counterValue {
             font-size: 2rem;
             color: white;
@@ -12,4 +15,49 @@
         }
     }
 
+}
+
+.wrap {
+    button {
+        background-color: #144272;
+        border: none;
+
+        p {
+            color: white;
+            font-weight: bolder;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.outline {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-bottom: solid 1px #123596;
+    // display: block;
+    border-radius: 999px;
+    opacity: 1;
+    background: rgb(255, 213, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.outline:hover {
+    width: 45px;
+    height: 45px;
+    border: solid 2px #36baff;
+    opacity: 1;
+    background: rgba(18, 241, 6, 0.893);
+    transition: 1s;
+    transform: rotate(720deg);
+}
+
+.outline:active {
+    border: solid 1px #ffb400;
+    transition: 0s;
 }

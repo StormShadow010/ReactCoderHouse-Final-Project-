@@ -30,13 +30,17 @@ export const ItemCount = ({ product }) => {
     return (
         <div className="counterContainer">
             <div className='buttonsCounter'>
-                <Button onClick={decrement}>-</Button>
+                <div className="wrap">
+                    <button onClick={decrement}><div className="outline"><p>-</p></div></button>
+                </div>
                 <span className='counterValue'>{count}</span>
-                <Button onClick={increment}>+</Button>
-                <Button onClick={reset}>Reset</Button>
+                <div className="wrap">
+                    <button onClick={increment}><div className="outline"><p>+</p></div></button>
+                </div>
             </div>
             <div>
-                <button onClick={handleAddProductToCart}>Agregar al Carrito</button>
+                <Button type='primary' onClick={reset} style={{ margin: "10px" }}>Reset</Button>
+                <Button type='primary' onClick={handleAddProductToCart} style={{ margin: "10px" }}>Add to cart</Button>
             </div>
         </div>
     )
