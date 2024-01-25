@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.mainContainerItemDetail {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #144272;
+
+    .mainInfoDetail {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        border: 5px solid hsl(204, 71%, 38%);
+        border-radius: 40px;
+        padding: 10px;
+        // margin: 10px;
+
+
+        .imageContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border-bottom: 5px solid #1C6EA4;
+            border-radius: 14px;
+            padding: 10px;
+
+            img {
+                max-width: 250px;
+                max-height: 250px;
+                object-fit: fill;
+                border-radius: 10px;
+            }
+        }
+
+        .infoContainer {
+            margin: 10px 0;
+            width: 100%;
+            border: 5px solid #FFF011;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .infoTitle {
+                border-bottom: 5px solid #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+                width: 90%;
+
+            }
+
+            .infoGenres {
+                border-bottom: 5px solid #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+                width: 90%;
+            }
+
+            .infoDescription {
+                border-bottom: 5px solid #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+                width: 90%;
+
+                .textInfo {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: #FDE767;
+                    text-align: justify;
+                }
+
+            }
+
+            .infoPrice {
+                border-bottom: 5px solid #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+                width: 90%;
+            }
+
+            .titleInfo {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+
+            }
+
+            .dataInfo {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #FDE767;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.containerCreateItem {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #144272;
+
+    .create-content {
+        display: block;
+        padding: 5px;
+        margin: 10px 0;
+
+        .createCategory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2C74B3;
+            border-radius: 30px;
+            box-shadow: -7px 7px 14px #cbced1,
+                7px -7px 14px #fff;
+            margin-top: 50px;
+            padding: 5px;
+
+            .inputSend {
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+            }
+
+            .buttonSend {
+                margin-top: 10px;
+                background-color: green;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h1 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                margin-bottom: 10px;
+                color: white;
+                text-align: center;
+            }
+        }
+
+        .createProduct {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2C74B3;
+            border-radius: 30px;
+            box-shadow: -7px 7px 14px #cbced1,
+                7px -7px 14px #fff;
+            margin-top: 50px;
+            padding: 10px;
+
+            .custom-label {
+                font-size: 1rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                color: #FDE767;
+            }
+
+            h1 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                margin-bottom: 10px;
+                color: white;
+                text-align: center;
+            }
+
+            .buttonsSend {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+}

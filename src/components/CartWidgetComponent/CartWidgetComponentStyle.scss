@@ -1,0 +1,16 @@
+.cartWidgetContainer {
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    width: 100%;
+
+    .logoCart img {
+        width: 50px;
+    }
+
+    .counterCartWidget span {
+        font-size: 30px;
+    }
+}
